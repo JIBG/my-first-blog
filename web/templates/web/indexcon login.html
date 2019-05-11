@@ -1,0 +1,472 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>LINDA SONRISA | Cuidamos tus dientes.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href='{% static "images/favicon.png" %}'>
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/all.css" %}'>
+    <link rel="stylesheet" href='{% static "css/swiper.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/venobox.css" %}'>
+    <link rel="stylesheet" href='{% static "css/jarallax.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.date.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.time.css" %}'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href='{% static "css/estilos.css" %}'>
+    
+</head>
+
+<body>
+    <section id="barra-contacto" class="bg-primary text-white py-3 py-lg-1 text-center">
+        <div class="container">
+            <div class="row justify-content-sm-between align-items-sm-center">
+                <div class="col-12 col-sm-auto">
+                    <i class="fas fa-map-marker-alt mr-1"></i><span>San Alfonso. San Bernardo, n° 389.</span>
+                </div>
+
+                <div class="col-12 col-sm-auto">
+                    <ul class="redes-sociales list-unstyled d-inline-flex mb-0">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="detalles-encabezado" class="d-none d-md-block py-3">
+        <div class="container">
+            <div class="row justify-content-md-between align-items-md-center">
+                <div class="col-auto">
+                    <a href="#" class="logo">
+                        <img src='{% static "images/logo.svg" %}' alt="Logo del sitio" width="200" class="img-fluid">
+                    </a>
+                </div>
+
+                <div class="col-auto ml-md-auto">
+                    <i class="fas fa-phone fa-flip-horizontal fa-2x align-middle text-primary"></i>
+                    <span class="font-weight-bold h5 ml-2">+569 36324409</span>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-envelope fa-2x align-middle text-primary"></i>
+                    <span class="font-weight-bold h5 ml-2">atención@lindasonrisa.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav id="menu-navegacion" class="navbar navbar-dark bg-secondary navbar-expand-md">
+        <div class="container">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu-principal"
+                aria-expanded="false" aria-label="Botón Menú principal">
+                <span class="boton-menu"></span>
+            </button>
+            <a href="/login/" class="btn btn-primary order-md-1">Ingresa</a>
+			<main>
+                {% block content %}
+                {% endblock %}
+            </main>	
+
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav mt-3 mt-md-0">
+                    <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#barra-contacto"
+                            class="nav-link active">Inicio</a></li>
+                    <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#bienvenidos" class="nav-link">Nosotros</a></li>
+                    <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#premios" class="nav-link">Destacados</a></li>
+                    <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#nuestra-app" class="nav-link">Nuestra APP</a>
+                    </li>
+                    <li class="nav-item mb-1 mb-md-0 mr-md-0"><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección #animacion -->
+    <section id="animacion" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide d-flex justify-content-center align-items-center"
+                style="background-image:url('/static/images/fondo-slide-2.jpg')">
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-9 col-sm-11">
+                            <h2 class="display-4 font-weight-bold">
+                                Reservar una cita es muy facil.
+                            </h2>
+                            <a href="#" class="btn btn-primary">Registrate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide d-flex justify-content-center align-items-center"
+                style="background-image:url('static/images/fondo-slide-1.jpg')">
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-9 col-sm-11">
+                            <h2 class="display-4 font-weight-bold">
+                                Creamos sonrisas brillantes que hablarán por tí.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide d-flex justify-content-center align-items-center"
+                style="background-image:url('static/images/fondo-slide-3.jpg')">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-9 col-sm-11">
+                            <h2 class="display-4 font-weight-bold">
+                                ¡Disponibles las 24 horas y los 7 días de la Semana!
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- Botones de paginación -->
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <section id="bienvenidos" class="py-5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 text-center">
+
+                    <div class="contenedor-video d-inline-block position-relative text-truncate">
+
+                        <img src='{% static "images/fondo-video.jpg" %}' alt="Imagen del video promocional del Sitio"
+                            class="img-fluid">
+                        <a href="http://www.youtu.be/AezDcQE5JOU" class="venobox-video" data-vbtype="video"
+                            title="Linda Sonrisa."><i class="fas fa-play"></i></a>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-6  pt-4 pt-lg-0 text-center text-lg-left">
+                    <h2 class="display-4 font-weight-bold text-secondary  mt-lg-n2">
+                        BIENVENIDOS A <span class="text-primary"> LINDAS SONRISAS.</span>
+                    </h2>
+                    <h6 class="text-black-50">SOMOS PARTE DE TÍ</h6>
+                    <p>
+                        Proporcionamos atención médica de la más alta calidad, tratamiento individualizado por los
+                        principales expertos del país y en el menor tiempo posible. Te invitamos a conocernos un poco
+                        más.
+                    </p>
+                    <a href="#" class="btn btn-primary mt-3">Registrate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="te-ayudamos" class="bg-secondary text-white text-center py-5 jarallax" data-jarallax data-speed="0.7">
+        <picture class="jarallax-img">
+            <source media="(min-width:1200px)" srcset='{% static "images/fondo-te-ayudamos-xl.jpg" %}'>
+            <source media="(min-width:768px)" srcset='{% static "images/fondo-te-ayudamos-md.jpg" %}'>
+            <img srcset='{% static "images/fondo-te-ayudamos.jpg" %}' alt="Fondo como podemos ayudarte" class="w-100">
+        </picture>
+
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12">
+                    <h2 class="display-4 font-weight-bold">CLÍNICA ODONTOLÓGICA <br> LINDA SONRISA</h2>
+                    <p>Creada con el objetivo de entregarle a sus pacientes una atención completa, 
+                        personalizada y comprometida, a la vanguardia en todos los tratamientos dentales,
+                        que devuelvan la confianza, la autoestima y la sonrisa trabajando siempre la función y
+                        la estabilidad para que los tratamientos sean duraderos en el tiempo.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="premios" class="py-5 text-center">
+
+        <div class="container py-5">
+            <h2 class="display-4 font-weight-bold text-secondary">NUESTRA CLÍNICA EN NÚMEROS</h2>
+            <h6 class="text-black-50">TENEMOS ALGUNOS NÚMEROS QUE MOSTRARTE.</h6>
+
+            <div class="row">
+                <div class="col-6 col-md-3 py-4">
+                    <i class="far fa-calendar-alt text-primary display-4 mb-2"></i>
+                    <div class="font-weight-bold text-secondary h2">
+                        <span class="counter" data-counterup-beginat="0" data-counterup-time="500">2</span>
+                    </div>
+                    <h6>Años de experiencia</h6>
+                    <div class="contador-linea"></div>
+
+                </div>
+                <div class="col-6 col-md-3 py-4">
+                    <i class="fab fa-angellist text-primary display-4 mb-2"></i>
+                    <div class="font-weight-bold text-secondary h2">
+                        <span class="counter" data-counterup-beginat="0" data-counterup-time="2000">186</span>
+                    </div>
+                    <h6>Clientes satisfechos</h6>
+                    <div class="contador-linea"></div>
+                </div>
+                <div class="col-6 col-md-3 py-4">
+                    <i class="fas fa-award text-primary display-4 mb-2"></i>
+                    <div class="font-weight-bold text-secondary h2">
+                        <span class="counter" data-counterup-beginat="0" data-counterup-time="1500">39</span>
+                    </div>
+                    <h6>Premios obtenidos</h6>
+                    <div class="contador-linea"></div>
+                </div>
+                <div class="col-6 col-md-3 py-4">
+                    <i class="fas fa-thumbs-up text-primary display-4 mb-2"></i>
+                    <div class="font-weight-bold text-secondary h2">
+                        <span class="counter" data-counterup-beginat="0"
+                            data-counterup-time="2000">100</span><span>%</span>
+                    </div>
+                    <h6>Aprobación de nuestros clientes</h6>
+                    <div class="contador-linea"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nuestra-app" class="bg-secondary py-5 text-white text-center text-md-left jarallax" data-jarallax
+        data-speed="0.6">
+        <picture class="jarallax-img">
+            <source media="(min-width:1200px)" srcset='{% static "images/fondo-descargar-app-xl.jpg" %}'>
+            <source media="(min-width:768px)" srcset='{% static "images/fondo-descargar-app-md.jpg" %}'>
+            <img srcset='{% static "images/fondo-descargar-app.jpg" %}' alt="Fondo Nuestra App" class="w-100">
+        </picture>
+
+        <div class="container">
+            <div class="row justify-content-md-end">
+                <div class="col-12 col-md-6">
+                    <h2 class="h1 font-weight-bold">DESCARGA NUESTRA APP Y ACCEDE A DESCUENTOS EXCLUSIVOS!</h2>
+                    <h6 class="text-white-50">SOMOS PARTE DE TÍ</h6>
+                    <p>Hemos creado una aplicación exclusiva para nuestros clientes. Desde donde podrás acceder a
+                        sorteos y descuentos especiales.</p>
+                    <a href="#" class="btn btn-primary mt-3">Conócenos más</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección #contacto -->
+    <section id="contacto">
+        <header class="py-5 bg-primary text-white text-center position-relative">
+            <h2 class="display-4 font-weight-bold">CONTÁCTANOS</h2>
+            <h6 class="text-white-50">ESTAMOS LISTOS PARA ATENDERTE</h6>
+            <div class="detalle-rectangulo"></div>
+        </header>
+
+        <div class="container">
+            <div class="row py-5">
+
+                <div class="col-12 col-lg-6">
+                    <h2 class="font-weight-bold text-center mb-2">Detalles de contacto:</h2>
+
+                    <ul class="list-unstyled">
+
+                        <li class="d-flex border-bottom py-4">
+                            <i class="fas fa-globe fa-3x text-primary mr-4 fa-fw"></i>
+                            <div>
+                                <h5 class="font-weight-bold">Dirección:</h5>
+                                <p class="mb-0">San Alfonso. San Bernardo, n° 389.</p>
+                            </div>
+                        </li>
+
+                        <li class="d-flex border-bottom py-4">
+                            <i class="fas fa-mobile-alt fa-3x text-warning mr-4 fa-fw"></i>
+                            <div>
+                                <h5 class="font-weight-bold">Teléfonos:</h5>
+                                <p class="mb-0">(+569) 3632 4409 , (+569) 6415 3655</p>
+                            </div>
+                        </li>
+                        <li class="d-flex border-bottom py-4">
+                            <i class="fas fa-envelope-open fa-3x text-danger mr-4 fa-fw"></i>
+                            <div>
+                                <h5 class="font-weight-bold">Email:</h5>
+                                <p class="mb-0">atención@lindasonrisa.com</p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+
+                <div class="col-12 col-lg-6 pt-4 pt-lg-0">
+                    <h2 class="font-weight-bold text-center mb-5">Consultas</h2>
+                    <form action="#" id="mi-formulario">
+
+                        <!-- Campo #nombre -->
+                        <div class="form-group form-row">
+                            <label for="nombre" class="col-form-label col-12 col-md-3">Nombre:</label>
+                            <div class="col-12 col-md-9">
+                                <input type="text" class="form-control" name="nombre" id="nombre"
+                                    placeholder="Ingrese su nombre" data-parsley-required
+                                    data-parsley-required-message="Este campo no puede estar vacio.">
+                            </div>
+                        </div>
+
+                        <!-- Campo #email -->
+                        <div class="form-group form-row">
+                            <label for="email" class="col-form-label col-12 col-md-3">Email:</label>
+                            <div class="col-12 col-md-9">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Ingrese su email" data-parsley-required data-parsley-type="email"
+                                    data-parsley-required-message="Este campo no puede estar vacio."
+                                    data-parsley-type-message="Ingrese un email en un formato válido.">
+                            </div>
+                        </div>
+
+                        <!-- Campo #celular -->
+                        <div class="form-group form-row">
+                            <label for="celular" class="col-form-label col-12 col-md-3">Celular:</label>
+                            <div class="col-12 col-md-9">
+                                <input type="text" class="form-control" name="celular" id="celular"
+                                    placeholder="Ingrese su celular" data-parsley-required data-parsley-length="[5, 20]"
+                                    data-parsley-required-message="Este campo no puede estar vacio."
+                                    data-parsley-length-message="El número telefónico debe tener entre 5 a 20 letras.">
+                            </div>
+                        </div>
+
+                        <!-- Campo #mensaje -->
+                        <div class="form-group form-row">
+                            <label for="mensage" class="col-form-label col-12 col-md-3">Mensage:</label>
+                            <div class="col-12 col-md-9">
+                                <textarea name="mensage" id="mensage" rows="4" class="form-control"
+                                    placeholder="Ingrese su mensage." data-parsley-required
+                                    data-parsley-required-message="Este campo no puede estar vacio."></textarea>
+                            </div>
+                        </div>
+                        <!-- Campo Enviar -->
+                        <div class="form-group form-row">
+                            <div class="col-12 col-md-9 offset-md-3">
+                                <button type="submit" class="btn btn-primary btn-block btn-lg">Enviar</button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección #pie-de-pagina -->
+
+    <footer id="pie-de-pagina" class="bg-dark  text-light text-truncate">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="columna-inclinada col-12 col-md-6 col-xl-5 py-2">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <h2 class="text-white font-weight-bold h1">Soporte +569 50428639</h2>
+                        </div>
+
+                        <div class="col-auto text-black-50 ">
+                            <i class="fas fa-briefcase-medical fa-4x"></i>
+                        </div>
+
+                        <div class="col-auto  text-black-50 pl-0">
+                            <h3></h3>
+                            <p>Servicio de ayuda disponible 24h/7.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-7 py-2 text-center text-md-right small">
+                    <ul class="enlaces-secundario list-unstyled d-inline-flex text-uppercase ">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Políticas de Privacidad</a></li>
+                    </ul>
+                    <p>©2019. Todos los derechos reservados.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+    <!-- Carga de "Jquery" -->
+    <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
+
+    <!-- Carga de "Popper" -->
+    <script src='{% static "js/popper.min.js" %}'></script>
+
+    <!-- Carga de "Bootstrap" -->
+    <script src='{% static "js/bootstrap.min.js" %}'></script>
+
+    <!-- Carga de "Swiper" -->
+    <script src='{% static "js/swiper.min.js" %}'></script>
+
+    <!-- Carga de "VenoBox" -->
+    <script src='{% static "js/venobox.min.js" %}'></script>
+
+    <!-- Carga de "Jarallax" -->
+    <script src='{% static "js/jarallax.min.js" %}'></script>
+
+    <!-- Carga de "PictureFill" -->
+    <script src='{% static "js/picturefill.min.js" %}'></script>
+
+    <!-- Carga de "Waypoints" -->
+    <script src='{% static "js/jquery.waypoints.min.js" %}'></script>
+
+    <!-- Carga de "jquery.counterup" -->
+    <script src='{% static "js/jquery.counterup.min.js" %}'></script>
+
+    <!-- Carga de "Picker.js" | Crea el selector de fecha y de hora-->
+    <script src='{% static "js/pickadate.js/picker.js" %}'></script>
+
+    <!-- Carga de "picker.date.js" | Crea el selector de fecha-->
+    <script src='{% static "js/pickadate.js/picker.date.js" %}'></script>
+
+    <!-- Carga de "picker.time.js" | Crea el selector de fecha-->
+    <script src='{% static "js/pickadate.js/picker.time.js" %}'></script>
+
+    <!-- Carga de "parsley.js" | Crea la validación de formularios-->
+    <script src='{% static "js/parsley.min.js" %}'></script>
+    <script src='{% static "js/parsley.es.js" %}'></script>
+
+    <!-- Carga de "Jquery Stickit.js" | Crean un encabezado fijo en la parte superior de la página-->
+    <script src='{% static "js/jquery.stickit.min.js" %}'></script>
+
+
+    <!-- Carga de "page-scroll-to-id" | Crean el efecto de scroll entre los enlaces-->
+    <script src='{% static "js/jquery.malihu.PageScroll2id.min.js" %}'></script>
+
+   <!-- Carga de "css_browser_selector" | Crean clases para identificar un disp.-->
+   <script src='{% static "js/css_browser_selector.js" %}'></script>
+
+
+
+
+    <!-- Archivo para configurar e iniciar las funciones de los scripts -->
+    <script src='{% static "js/mis-scripts.js" %}'></script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

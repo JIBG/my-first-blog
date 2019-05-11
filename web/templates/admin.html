@@ -1,0 +1,14 @@
+{% extends 'web/index.html' %}
+
+
+{% block title %}Admin{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hola {{ user.username }} 
+  <p><a href="{% url 'logout' %}">Cerrar Sesión</a></p>
+{% else %}
+  <p>No estás logeado :(</p>
+  <a href="{% url 'login' %}">Entrar</a>
+{% endif %}
+{% endblock %}

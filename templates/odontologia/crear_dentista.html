@@ -1,0 +1,99 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>LINDA SONRISA | Cuidamos tus dientes.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href='{% static "images/favicon.png" %}'>
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/all.css" %}'>
+    <link rel="stylesheet" href='{% static "css/swiper.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/venobox.css" %}'>
+    <link rel="stylesheet" href='{% static "css/jarallax.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.date.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.time.css" %}'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href='{% static "css/estilos.css" %}'>
+
+    <section id="detalles-encabezado" class="d-none d-md-block py-3">
+            <div class="container">
+                <div class="row justify-content-md-between align-items-md-center">
+                    <div class="col-auto">
+                        <a href="#" class="logo">
+                            <img src='{% static "images/logo.svg" %}' alt="Logo del sitio" width="200" class="img-fluid">
+                        </a>
+                    </div>
+    
+                    <div class="col-auto ml-md-auto">
+                        <i class="fas fa-phone fa-flip-horizontal fa-2x align-middle text-primary"></i>
+                        <span class="font-weight-bold h5 ml-2">+569 36324409</span>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-envelope fa-2x align-middle text-primary"></i>
+                        <span class="font-weight-bold h5 ml-2">atención@lindasonrisa.com</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+</head>
+<br>
+
+<body>
+    
+    
+    
+
+    <!-- Sección #animacion -->
+    
+
+       
+   
+
+    <section id="bienvenidos" class="py-5">
+        
+        <div class="container">
+            <form method="POST">
+                <h2>Registrar Dentista</h2>
+                 <br>
+                    
+                {% csrf_token %}
+                {% if error %}
+                    <h2>{{ error }}</h2>
+                {% else %}
+                        
+            
+                {{ dentista_form.as_p }}
+                <button type="submit">Guardar</button>
+                <br>
+                <br>
+                <a href="http://127.0.0.1:8000/administrador/">Salir</a>
+                {% endif %} 
+
+
+                    
+                    
+                        
+            
+            </form>
+
+
+
+
+        </div>
+            
+    </section>
+
+    
+
+    
+    
+</body>
+  
+
+    <!-- Sección #pie-de-pagina -->
+
+    

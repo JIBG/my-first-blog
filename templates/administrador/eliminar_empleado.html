@@ -1,0 +1,152 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <title>LINDA SONRISA | Cuidamos tus dientes.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href='{% static "images/favicon.png" %}'>
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/all.css" %}'>
+    <link rel="stylesheet" href='{% static "css/swiper.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/venobox.css" %}'>
+    <link rel="stylesheet" href='{% static "css/jarallax.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.date.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.time.css" %}'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href='{% static "css/estilos.css" %}'>
+    <link rel="stylesheet" href='{% static "css/estilos2.css" %}'>
+    <link rel="stylesheet" href='{% static "fonts/fontawesome-all.min.css" %}'>
+    <link rel="stylesheet" href='{% static "fonts/font-awesome.min.css" %}'>
+    <link rel="stylesheet" href='{% static "fonts/material-icons.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/Features-Boxed.css" %}'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    
+</head>
+
+<body> 
+        <section id="detalles-encabezado" class="d-none d-md-block py-3">
+        <div class="container">
+            <div class="row justify-content-md-between align-items-md-center">
+                <div class="col-auto">
+                    <a href="#" class="logo">
+                        <img src='{% static "images/logo.svg" %}' alt="Logo del sitio" width="200" class="img-fluid">
+                    </a>
+                </div>
+
+                <div class="col-auto">
+                    <i class="fas fa-envelope fa-2x align-middle text-primary"></i>
+                    <span class="font-weight-bold h5 ml-2">soporte@lindasonrisa.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav id="menu-navegacion" class="navbar navbar-dark bg-secondary navbar-expand-md">
+        <div class="container">
+            
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu-principal"
+                aria-expanded="false" aria-label="Botón Menú principal">
+                <span class="boton-menu"></span>
+            </button>
+            <a href="http://127.0.0.1:8000/administrador" class="btn btn-primary order-md-1">Volver</a>
+            <main>
+                {% block content %}
+                {% endblock %}
+            </main>
+            
+        </div>
+    </nav>
+    <br>
+
+<body>
+    
+    
+<div class="container">
+    <div class="col-12  text-center">
+                    
+                    
+        <h2 class="display-4 font-weight-bold text-secondary  mt-lg-n2">
+        Eliminar <span class="text-primary"> Empleado</span>
+        </h2>
+        <br>
+                    
+     </div>
+    <div >
+         <div class="col-12 col-lg-9">
+
+            <form method="POST">
+                
+                {% csrf_token %}
+                <h2>¿Desea Eliminar? {{ empleado.rut}} {{ empleado.nombre}}</h2>   
+                           
+                <button type="submit"> Eliminar</button>
+                <a href="{% url 'administrador:listar_empleado' %}">Cancelar</a>
+                            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer id="pie-de-pagina" class="bg-dark  text-light text-truncate">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="columna-inclinada col-12 col-md-6 col-xl-5 py-2">
+                    <div class="row">
+
+                       
+
+                        <div class="col-auto text-black-50 ">
+                            <i class="fas fa-briefcase-medical fa-4x"></i>
+                            <h3><br></h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-7 py-2 text-center text-md-right small">
+                   
+                    <p>©2019. Todos los derechos reservados.</p>
+                </div>
+
+            </div>
+        </div>
+
+</footer>
+
+ 
+
+
+    <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
+    <script src='{% static "js/popper.min.js" %}'></script>
+    <script src='{% static "js/bootstrap.min.js" %}'></script>
+    <script src='{% static "js/swiper.min.js" %}'></script>
+    <script src='{% static "js/venobox.min.js" %}'></script>
+    <script src='{% static "js/jarallax.min.js" %}'></script>
+    <script src='{% static "js/picturefill.min.js" %}'></script>
+    <script src='{% static "js/jquery.waypoints.min.js" %}'></script>
+    <script src='{% static "js/jquery.counterup.min.js" %}'></script>
+    <script src='{% static "js/pickadate.js/picker.js" %}'></script>
+    <script src='{% static "js/pickadate.js/picker.date.js" %}'></script>
+    <script src='{% static "js/pickadate.js/picker.time.js" %}'></script>
+    <script src='{% static "js/parsley.min.js" %}'></script>
+    <script src='{% static "js/parsley.es.js" %}'></script>
+    <script src='{% static "js/jquery.stickit.min.js" %}'></script>
+    <script src='{% static "js/jquery.malihu.PageScroll2id.min.js" %}'></script>
+    <script src='{% static "js/css_browser_selector.js" %}'></script>
+    <script src='{% static "js/mis-scripts.js" %}'></script>
+    <script src='{% static "js/bs-animation.js" %}'></script>
+   

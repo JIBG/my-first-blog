@@ -1,0 +1,294 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <title>LINDA SONRISA | Cuidamos tus dientes.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href='{% static "images/favicon.png" %}'>
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/all.css" %}'>
+    <link rel="stylesheet" href='{% static "css/swiper.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/venobox.css" %}'>
+    <link rel="stylesheet" href='{% static "css/jarallax.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.date.css" %}'>
+    <link rel="stylesheet" href='{% static "js/pickadate.js/themes/default.time.css" %}'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href='{% static "css/estilos.css" %}'>
+    <link rel="stylesheet" href='{% static "css/estilos2.css" %}'>
+    <link rel="stylesheet" href='{% static "fonts/fontawesome-all.min.css" %}'>
+    <link rel="stylesheet" href='{% static "fonts/font-awesome.min.css" %}'>
+    <link rel="stylesheet" href='{% static "fonts/material-icons.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/Features-Boxed.css" %}'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    
+</head>
+
+<body> 
+        <section id="detalles-encabezado" class="d-none d-md-block py-3">
+        <div class="container">
+            <div class="row justify-content-md-between align-items-md-center">
+                <div class="col-auto">
+                    <a href="#" class="logo">
+                        <img src='{% static "images/logo.svg" %}' alt="Logo del sitio" width="200" class="img-fluid">
+                    </a>
+                </div>
+
+                <div class="col-auto">
+                    <i class="fas fa-envelope fa-2x align-middle text-primary"></i>
+                    <span class="font-weight-bold h5 ml-2">soporte@lindasonrisa.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav id="menu-navegacion" class="navbar navbar-dark bg-secondary navbar-expand-md">
+        <div class="container">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu-principal"
+                aria-expanded="false" aria-label="Botón Menú principal">
+                <span class="boton-menu"></span>
+            </button>
+            <a href="http://127.0.0.1:8000" class="btn btn-primary order-md-1">Cerrar Sesión</a>
+            <main>
+                {% block content %}
+                {% endblock %}
+            </main>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav mt-3 mt-md-0">
+                    <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#animacion"
+                            class="nav-link active">Inicio</a></li>
+                    <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#panel" class="nav-link">Panel de Control</a></li>
+                    <li class="nav-item mb-1 mb-md-0 mr-md-2"><a href="#soporte" class="nav-link">Soporte</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<section id="animacion" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide d-flex justify-content-center align-items-center"
+                style= "background: url('/static/images/admi.jpg')">
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-9 col-sm-11">
+                            <h2 class="display-4 font-weight-bold">
+                                Bienvenido Administrador.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<section id="bienvenidos" class="py-5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 text-center">
+
+                    <div class="contenedor-video d-inline-block position-relative text-truncate">
+
+                        <img src='{% static "images/como.jpg" %}' alt="Imagen del video promocional del Sitio"
+                            class="img-fluid">
+                        <a href="http://www.youtu.be/AezDcQE5JOU" class="venobox-video" data-vbtype="video"
+                            title="Linda Sonrisa."><i class="fas fa-play"></i></a>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-6  pt-4 pt-lg-0 text-center text-lg-left">
+                    <br>
+                    
+                    <h2 class="display-4 font-weight-bold text-secondary  mt-lg-n2">
+                        DUDAS CON EL SISTEMA<span class="text-primary"> LINDAS SONRISAS?</span>
+                    </h2>
+                    <h6 class="text-black-50">Te Ayudamos!</h6>
+                    <p>
+                        Proporcionamos ayuda de la más alta calidad, con el video tutorial aprenderas a manejar el sistema de administrador a su <span class="text-primary">100%</span>. Te invitamos a conocer el sistema Linda Sonrisa un poco más.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+    <div id ="panel" class="features-boxed">
+        <div class="container">
+            <!-- <div class="intro">
+               
+            </div> -->
+            <hr>
+            <div class="row justify-content-center features">
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div data-bs-hover-animate="bounce" class="box"><i class="fa fa-users icon"></i>
+                        <h3 class="name">Pacientes</h3>
+                        <p class="description">Toma el control de los pacientes de la clinica, visualiza los pacientes y eliminarlos.</p>
+                        <a href="listar_paciente" >Buscar Pacientes</a></div>
+                        
+                </div>  
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div data-bs-hover-animate="bounce" class="box" ><i class="fa fa-users icon"></i>
+                        <h3 class="name">Empleados</h3>
+                        <p class="description">Toma el control completo de todos los empleados de la clinica, agrega empleados, listalos y desvicular funcionarios.</p>
+                        <a href="crear_empleado">Crear Empleado</a><br>
+                        <a href="listar_empleado">Buscar Empleados</a>
+                    </div>    
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div data-bs-hover-animate="bounce" class="box" ><i class="far fa-list-alt icon"></i>
+                        <h3 class="name">Servicios</h3>
+                        <p class="description">Toma el control completo de todos los servicios de la clinica, agrega servicos, listalos y desviculalos </p>
+                        <a href="crear_servicio">Crear Servicio</a><br>
+                        <a href="listar_servicio">Buscar Servicio</a></div>
+                </div>
+
+                   
+                    
+                  
+            </div>
+        </div>
+    </div>
+    <hr>
+<div id = "soporte"class="container">
+    <div class="col-12  text-center">
+                    <br>
+                    
+                    <h2 class="display-4 font-weight-bold text-secondary  mt-lg-n2">
+                        ¿NECESITAS AYUDA <span class="text-primary"> URGENTE?!</span>
+                    </h2>
+                    <h6 class="text-black-50">Contacte con nosotros.</h6>
+                    <p>
+                        Escríbenos tus dudas indicando tu nombre, correo electronico, la prioridad de tu mensaje y por ultimo, descríbenos tu duda.
+                    </p>
+                </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+
+                <form action="" class="bg-light my-3 p-3 border rounded">
+                    <h2>Contacto al Soporte</h2>
+
+                    <!-- Campo nombre -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese su nombre...">
+                        </div>
+                    </div>
+
+                    <!-- Campo email -->
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                            </div>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Ingrese su email...">
+                        </div>
+                    </div>
+
+                    <!-- Campo Prioridad -->
+
+                    <div class="form-group">
+                        <label class="d-block">Prioridad:</label>
+
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="prioridad" id="baja" value="baja"
+                                checked>
+                            <label for="baja" class="form-check-label">Baja</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="prioridad" id="normal" value="normal">
+                            <label for="normal" class="form-check-label">Normal</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="prioridad" id="alta" value="alta">
+                            <label for="alta" class="form-check-label">Alta</label>
+                        </div>
+
+                    </div>
+
+                    <!-- Campo mensaje -->
+                    <div class="form-group">
+                        <label for="mensaje">Su mensaje:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="far fa-comments"></i></span>
+                            </div>
+                            <textarea name="mensaje" id="mensaje" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group text-right mb-0">
+
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="reset" class="btn btn-secondary">Borrar</button>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+<footer id="pie-de-pagina" class="bg-dark  text-light text-truncate">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="columna-inclinada col-12 col-md-6 col-xl-5 py-2">
+                    <div class="row">
+
+                       
+
+                        <div class="col-auto text-black-50 ">
+                            <i class="fas fa-briefcase-medical fa-4x"></i>
+                            <h3><br></h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-7 py-2 text-center text-md-right small">
+                   
+                    <p>©2019. Todos los derechos reservados.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+ 
+
+
+    <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
+    <script src='{% static "js/popper.min.js" %}'></script>
+    <script src='{% static "js/bootstrap.min.js" %}'></script>
+    <script src='{% static "js/swiper.min.js" %}'></script>
+    <script src='{% static "js/venobox.min.js" %}'></script>
+    <script src='{% static "js/jarallax.min.js" %}'></script>
+    <script src='{% static "js/picturefill.min.js" %}'></script>
+    <script src='{% static "js/jquery.waypoints.min.js" %}'></script>
+    <script src='{% static "js/jquery.counterup.min.js" %}'></script>
+    <script src='{% static "js/pickadate.js/picker.js" %}'></script>
+    <script src='{% static "js/pickadate.js/picker.date.js" %}'></script>
+    <script src='{% static "js/pickadate.js/picker.time.js" %}'></script>
+    <script src='{% static "js/parsley.min.js" %}'></script>
+    <script src='{% static "js/parsley.es.js" %}'></script>
+    <script src='{% static "js/jquery.stickit.min.js" %}'></script>
+    <script src='{% static "js/jquery.malihu.PageScroll2id.min.js" %}'></script>
+    <script src='{% static "js/css_browser_selector.js" %}'></script>
+    <script src='{% static "js/mis-scripts.js" %}'></script>
+    <script src='{% static "js/bs-animation.js" %}'></script>
+
+
+
+</html>
